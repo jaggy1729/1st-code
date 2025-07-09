@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ashirvad Multispeciality Hospital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="aaa73fe2-7134-4dfc-9f2c-b022908177a8.gif" alt="Hospital Logo" class="logo">
+    <h1>Ashirvad Multispeciality Hospital</h1>
+  </header>
+
+  <section class="specialties">
+    <h2>Our Specialties & Facilities</h2>
+    <div class="cards" id="specialtyCards">
+      <div class="card" data-type="Cardiology">Cardiology</div>
+      <div class="card" data-type="Dermatology">Dermatology</div>
+      <div class="card" data-type="Pediatrics">Pediatrics</div>
+      <div class="card" data-type="Orthopedics">Orthopedics</div>
+      <div class="card" data-type="ICU">ICU & Emergency</div>
+      <div class="card" data-type="Pharmacy">24x7 Pharmacy</div>
+      <div class="card" data-type="Neurology">Neurology</div>
+      <div class="card" data-type="Gastroenterology">Gastroenterology</div>
+      <div class="card" data-type="Oncology">Oncology</div>
+      <div class="card" data-type="General Medicine">General Medicine</div>
+    </div>
+    <div class="card-info" id="cardInfo"></div>
+  </section>
+
+  <div class="book-button">
+    <button onclick="scrollToForm()">📅 Book Appointment</button>
+  </div>
+
+  <!-- Appointment Form -->
+  <section class="appointment" id="appointment">
+    <h2>Book Your Appointment</h2>
+    <form id="appointmentForm">
+      <label for="specialty">Choose Specialty:</label>
+      <select id="specialty" required>
+        <option value="" disabled selected>Select</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Dermatology">Dermatology</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="ICU">ICU & Emergency</option>
+        <option value="Pharmacy">24x7 Pharmacy</option>
+        <option value="Neurology">Neurology</option>
+        <option value="Gastroenterology">Gastroenterology</option>
+        <option value="Oncology">Oncology</option>
+        <option value="General Medicine">General Medicine</option>
+      </select>
+
+      <label for="doctor">Choose a Doctor:</label>
+      <select id="doctor" required>
+        <option value="" disabled selected>Select a specialty first</option>
+      </select>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" min="0" required>
+
+      <label for="contact">Contact Number:</label>
+      <input type="tel" id="contact" pattern="[0-9]{10}" required>
+
+      <label for="date">Appointment Date:</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Time Slot:</label>
+      <select id="time" required>
+        <option value="" disabled selected>Select</option>
+        <option value="10:00 AM - 10:30 AM">10:00 AM - 10:30 AM</option>
+        <option value="11:00 AM - 11:30 AM">11:00 AM - 11:30 AM</option>
+        <option value="12:00 PM - 12:30 PM">12:00 PM - 12:30 PM</option>
+        <option value="2:00 PM - 2:30 PM">2:00 PM - 2:30 PM</option>
+      </select>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+    <div id="confirmation"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
